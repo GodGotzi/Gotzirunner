@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.gotzi.itsmanager.controller.panelcontroll.StudentQuestionPanelController">
+    <children>
+        <Label fx:id="question" alignment="CENTER" layoutX="286.0" layoutY="28.0" prefHeight="53.0" prefWidth="231.0" text="Question">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label fx:id="kn" layoutX="14.0" layoutY="42.0" prefHeight="25.0" prefWidth="57.0" text="KN" textAlignment="CENTER">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+      <Label fx:id="name" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="131.0" text="name" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="7.0" layoutY="67.0" prefHeight="28.0" prefWidth="145.0" text="Question Points:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="points" alignment="CENTER" layoutX="152.0" layoutY="69.0" prefHeight="25.0" prefWidth="73.0" text="p">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="664.0" layoutY="61.0" mnemonicParsing="false" onButtonAction="#showCode" prefHeight="41.0" prefWidth="99.0" text="Source Code" />
+      <ListView fx:id="paneListView" layoutX="18.0" layoutY="157.0" prefHeight="436.0" prefWidth="768.0" />
+      <Label layoutX="280.0" layoutY="121.0" prefHeight="30.0" prefWidth="66.0" text="Inputs">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="442.0" layoutY="121.0" prefHeight="30.0" prefWidth="92.0" text="Expected">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="631.0" layoutY="121.0" prefHeight="30.0" prefWidth="66.0" text="Ouput">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

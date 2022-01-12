@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.gotzi.itsmanager.controller.EditviewController">
+    <children>
+        <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="1600.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#fileOpen" text="Open New Workspace" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#fileClose" text="Close Workspace" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Contact Me">
+                            <graphic>
+                                <SplitMenuButton mnemonicParsing="false" text="Contacts">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Discord Gotzi#2650" />
+                                        <MenuItem mnemonicParsing="false" text="E-Mail goteln20@htl-kaindorf.at" />
+                                    </items>
+                                </SplitMenuButton>
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <Button layoutX="14.0" layoutY="836.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="144.0" text="Back">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="308.0" layoutY="176.0" prefHeight="57.0" prefWidth="170.0" text="Student Data">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="318.0" layoutY="54.0" prefHeight="35.0" prefWidth="159.0" text="Key for Grades">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="kfg3" layoutX="340.0" layoutY="139.0" onAction="#changeKFG" prefHeight="25.0" prefWidth="54.0" />
+      <TextField fx:id="kfg2" layoutX="340.0" layoutY="114.0" onAction="#changeKFG" prefHeight="25.0" prefWidth="54.0" />
+      <TextField fx:id="kfg4" layoutX="340.0" layoutY="164.0" onAction="#changeKFG" prefHeight="25.0" prefWidth="54.0" />
+      <TextField fx:id="kfg1" layoutX="340.0" layoutY="89.0" onAction="#changeKFG" prefHeight="25.0" prefWidth="54.0" />
+      <Label layoutX="405.0" layoutY="89.0" prefHeight="25.0" prefWidth="41.0" text="&gt; 1  ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="114.0" prefHeight="25.0" prefWidth="41.0" text="&gt; 2  ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="139.0" prefHeight="25.0" prefWidth="41.0" text="&gt; 3  ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="164.0" prefHeight="25.0" prefWidth="41.0" text="&gt; 4 ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="640.0" layoutY="836.0" mnemonicParsing="false" onAction="#save" prefHeight="50.0" prefWidth="144.0" text="Save">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="testLabel" alignment="CENTER" layoutX="602.0" layoutY="47.0" prefHeight="50.0" prefWidth="396.0" text="Label">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Button layoutX="59.0" layoutY="205.0" mnemonicParsing="false" onAction="#clearData" prefHeight="42.0" prefWidth="117.0" text="Clear Data" />
+      <ListView fx:id="questionListViews" layoutX="709.0" layoutY="139.0" prefHeight="670.0" prefWidth="865.0" />
+      <Label alignment="CENTER" layoutX="1080.0" layoutY="81.0" prefHeight="42.0" prefWidth="159.0" text="Questions">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="817.0" layoutY="836.0" mnemonicParsing="false" onAction="#reload" prefHeight="50.0" prefWidth="144.0" text="Reload">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="1424.0" layoutY="87.0" mnemonicParsing="false" onAction="#createNewQuestion" text="Create New Question">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ListView fx:id="studentResultListViews" layoutX="59.0" layoutY="250.0" prefHeight="557.0" prefWidth="630.0" />
+    </children>
+</AnchorPane>

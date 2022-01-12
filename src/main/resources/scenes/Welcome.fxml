@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.gotzi.itsmanager.controller.WelcomeController">
+   <children>
+      <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="1600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#fileOpen" text="Open New Workspace" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#fileClose" text="Close Workspace" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Contact Me">
+                     <graphic>
+                        <SplitMenuButton mnemonicParsing="false" text="Contacts">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Discord Gotzi#2650" />
+                            <MenuItem mnemonicParsing="false" text="E-Mail goteln20@htl-kaindorf.at" />
+                          </items>
+                        </SplitMenuButton>
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="310.0" fitWidth="215.0" layoutX="676.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GotziRunnerLogo2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="welcomeScreen" fitHeight="564.0" fitWidth="851.0" layoutX="407.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/MainScreenGotziRunner.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="welcomeButton1" layoutX="708.0" layoutY="450.0" mnemonicParsing="false" onAction="#fileOpen" text="Open New Workspace" />
+      <ChoiceBox fx:id="choiceBox" layoutX="702.5" layoutY="508.0" prefWidth="150.0" />
+      <Label layoutX="715.0" layoutY="490.0" text="Open Last Workspaces" />
+      <Label layoutX="1349.0" layoutY="111.0" prefHeight="26.0" prefWidth="120.0" text="C Compiler path">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="compilerPath" layoutX="1256.0" layoutY="142.0" prefHeight="26.0" prefWidth="299.0" />
+   </children>
+</AnchorPane>
